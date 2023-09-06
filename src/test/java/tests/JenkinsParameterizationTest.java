@@ -14,6 +14,7 @@ public class JenkinsParameterizationTest {
 		String browser = System.getProperty("browser");
 		switch(browser) {
 		case "chrome":
+			System.setProperty("webdriver.chrome.driver", "./src/main/resources/chromedriver.exe");
 			driver = new ChromeDriver();
 			break;
 		case "firefox":
